@@ -115,6 +115,7 @@ MonoBehaviour:
   facingRight: 0
   enemyHealth: {fileID: 0}
   damage: 1
+  hitSound: {fileID: 8300000, guid: c8677862719e441688678e6632161da9, type: 3}
 --- !u!1 &8862588417714919619
 GameObject:
   m_ObjectHideFlags: 0

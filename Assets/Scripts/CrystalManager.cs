@@ -5,6 +5,9 @@ public class CrystalManager : MonoBehaviour
 {
     public int crystalCount;
     public Text crystalText;
+    public GameObject doorOne;
+    public bool doorOneOpened;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,5 +18,11 @@ public class CrystalManager : MonoBehaviour
     void Update()
     {
         crystalText.text = "Crystals: " + crystalCount.ToString();
+
+        if (crystalCount == 3 && !doorOneOpened)
+        {
+            doorOneOpened = true;
+            Destroy(doorOne);
+        }
     }
 }

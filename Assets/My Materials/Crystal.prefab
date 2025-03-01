@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3424439090693092892}
   - component: {fileID: 3501594577239719568}
   - component: {fileID: 5444411660025086530}
+  - component: {fileID: -8701462923336473596}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Crystal
@@ -124,3 +125,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.07241085, y: 0.02172336}
   m_Radius: 0.74179244
+--- !u!114 &-8701462923336473596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6861675373931400440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74bb3fdd461afa4bb06608d1d4ca6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: dc8073446157b4fedb0f0664913c33ec, type: 3}

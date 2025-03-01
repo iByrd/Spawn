@@ -8,6 +8,8 @@ public class ProjectileBehavior : MonoBehaviour
     public EnemyHealth enemyHealth;
     public float damage;
 
+    public AudioClip hitSound;
+
     private void Start()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -33,6 +35,7 @@ public class ProjectileBehavior : MonoBehaviour
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
             //enemyHealth.TakeDamage(damage);
         }
+        AudioSource.PlayClipAtPoint(hitSound, transform.position, 4.0f);
         Destroy(gameObject);
     }
 }

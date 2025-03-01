@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public CrystalManager cm;
 
     //projectiles
-    public ProjectileBehavior projectilePrefab;
-    public Transform LaunchOffset;
+    //public ProjectileBehavior projectilePrefab;
+    //public Transform LaunchOffset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -68,10 +68,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // projectile shoot
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
-        }
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    Instantiate(projectilePrefab, LaunchOffset.position, transform.rotation);
+        //}
 
         //GetInput();
 

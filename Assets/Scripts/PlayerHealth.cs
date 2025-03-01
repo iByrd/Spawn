@@ -8,6 +8,10 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public Image healthBar;
 
+    public AudioSource audioSource;
+    public AudioClip playerHurtSound;
+    public AudioClip playerDeathSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,9 +27,19 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
+
+        if (audioSource != null && playerHurtSound != null)
+        {
+            audioSource.PlayOneShot(playerHurtSound);
+        }
+
         if (health <= 0)
         {
-            Destroy(gameObject);
+            if (audioSource != null && playerDeathSound != null)
+            {
+                audioSource.PlayOneShot(playerDeathSound);
+            }
+            Destroy(gameObject, 2.0f);
         }
     }
 
