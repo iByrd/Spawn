@@ -21,6 +21,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Player Hit!");
             playerHealth.TakeDamage(damage);
         }
     }

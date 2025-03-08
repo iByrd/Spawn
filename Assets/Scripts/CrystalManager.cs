@@ -1,10 +1,10 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CrystalManager : MonoBehaviour
 {
     public int crystalCount;
-    public Text crystalText;
+    public TMP_Text crystalText;
     public GameObject doorOne;
     public bool doorOneOpened;
 

@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip playerHurtSound;
     public AudioClip playerDeathSound;
 
+    public GameOverManager gameOverManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,7 +41,9 @@ public class PlayerHealth : MonoBehaviour
             {
                 audioSource.PlayOneShot(playerDeathSound);
             }
-            Destroy(gameObject, 2.0f);
+            gameOverManager.ShowGameOverScreen();
+            gameObject.SetActive(false);
+            //Destroy(gameObject, 2.0f);
         }
     }
 
